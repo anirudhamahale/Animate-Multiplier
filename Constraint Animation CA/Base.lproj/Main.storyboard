@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -14,10 +15,51 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fRu-yY-8Ba" userLabel="Green">
+                                <rect key="frame" x="112" y="40" width="150" height="607"/>
+                                <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ltr-WA-UK4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jpb-rZ-emN" userLabel="Blue">
+                                <rect key="frame" x="280" y="40" width="75" height="607"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kgw-LV-DJh" userLabel="Red">
+                                <rect key="frame" x="20" y="40" width="75" height="607"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="jpb-rZ-emN" firstAttribute="height" secondItem="kgw-LV-DJh" secondAttribute="height" id="1zS-Ee-Wsk"/>
+                            <constraint firstItem="fRu-yY-8Ba" firstAttribute="leading" secondItem="kgw-LV-DJh" secondAttribute="trailing" constant="17" id="BjN-mn-gFj"/>
+                            <constraint firstItem="kgw-LV-DJh" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.3" priority="1" id="FWT-G8-6f2"/>
+                            <constraint firstItem="fRu-yY-8Ba" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" constant="-60" id="Q2G-SM-9Jp"/>
+                            <constraint firstItem="fRu-yY-8Ba" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.2" priority="1" id="XaT-gP-b9b"/>
+                            <constraint firstItem="jpb-rZ-emN" firstAttribute="width" secondItem="kgw-LV-DJh" secondAttribute="width" priority="999" id="ZZx-GK-bXy"/>
+                            <constraint firstItem="fRu-yY-8Ba" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ayW-Hg-s2b"/>
+                            <constraint firstItem="fRu-yY-8Ba" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.4" priority="999" id="chE-9W-N8m"/>
+                            <constraint firstItem="kgw-LV-DJh" firstAttribute="height" secondItem="fRu-yY-8Ba" secondAttribute="height" id="gdj-Wg-6G0"/>
+                            <constraint firstItem="jpb-rZ-emN" firstAttribute="top" secondItem="fRu-yY-8Ba" secondAttribute="top" id="m1B-ph-dWe"/>
+                            <constraint firstItem="fRu-yY-8Ba" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="myT-Nx-03h"/>
+                            <constraint firstItem="jpb-rZ-emN" firstAttribute="leading" secondItem="fRu-yY-8Ba" secondAttribute="trailing" constant="18" id="qrF-KS-hzW"/>
+                            <constraint firstItem="kgw-LV-DJh" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.2" priority="999" id="tDQ-yX-UIz"/>
+                            <constraint firstItem="kgw-LV-DJh" firstAttribute="top" secondItem="fRu-yY-8Ba" secondAttribute="top" id="xRS-eU-jLd"/>
+                        </constraints>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="greenButton" destination="fRu-yY-8Ba" id="ep3-EU-pAB"/>
+                        <outlet property="greenWidthB" destination="chE-9W-N8m" id="NXB-yo-8gs"/>
+                        <outlet property="greenWidthS" destination="XaT-gP-b9b" id="F4R-6J-Scu"/>
+                        <outlet property="redWidthB" destination="FWT-G8-6f2" id="zPJ-p7-g16"/>
+                        <outlet property="redWidthS" destination="tDQ-yX-UIz" id="b0J-Pp-xJa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
